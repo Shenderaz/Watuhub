@@ -1,13 +1,14 @@
-import express from "express";
-import cors from "cors";
+import express from 'express';
+import cors from 'cors';
 
 const app = express();
-app.use(cors());
-app.use(express.json());
 
-// Test route
-app.get("/", (req, res) => {
-  res.json({ message: "Testing Testing Watuhub" });
-});
+// Configure CORS to allow requests from your frontend's URL
+const corsOptions = {
+    origin: 'http://localhost:5173', // Must match your Vite development port
+    credentials: true,
+    optionsSuccessStatus: 200
+};
 
-app.listen(5000, () => console.log("Backend listening on port 5000"));
+app.use(cors(corsOptions));
+// ... other middleware and routes
