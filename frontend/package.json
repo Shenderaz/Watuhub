@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
+    "type": "module",
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview"
@@ -12,6 +13,7 @@
     "react-dom": "^18.2.0"
   },
   "devDependencies": {
+    "@vitejs/plugin-react": "^5.1.1",
     "@vitejs/plugin-react-swc": "^3.5.0",
     "vite": "^5.0.0"
   }
